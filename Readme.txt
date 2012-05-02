@@ -1,0 +1,1 @@
+You downloaded this off a random guy's blog. It's provided with ZERO warranty. If it formats your hard drive I don't know you. Good luck. The source is available on http://www.github.com/shanselman.
