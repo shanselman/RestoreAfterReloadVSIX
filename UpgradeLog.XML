@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ReloadPackage">
+</Property><Property Name="Solution File" Value="C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\ReloadPackage.sln">
+</Property><Property Name="Date" Value="Tuesday, May 01, 2012">
+</Property><Property Name="Time" Value="17:22:20 PM">
+</Property></Properties><Event ErrorLevel="3" Project="ReloadPackage" Source="ReloadPackage.csproj" Description="SafeUpgrade">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="ReloadPackage.csproj" Description="Project file successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\ReloadPackage.csproj">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="ReloadPackage.csproj.user" Description="Project user file successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\ReloadPackage.csproj.user">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="Guids.cs" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\Guids.cs">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="Resources.Designer.cs" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="GlobalSuppressions.cs" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\GlobalSuppressions.cs">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="ReloadPackagePackage.cs" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\ReloadPackagePackage.cs">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="source.extension.vsixmanifest" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\source.extension.vsixmanifest">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="Key.snk" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\Key.snk">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="Resources\Package.ico" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\Resources\Package.ico">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="Resources.resx" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="VSPackage.resx" Description="File successfully backed up as C:\Users\scottha\Desktop\github\RestoreAfterReloadVSIX\Backup\VSPackage.resx">
+</Event><Event ErrorLevel="0" Project="ReloadPackage" Source="ReloadPackage.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ReloadPackage" Source="ReloadPackage.csproj" Description="Converted">
+</Event></UpgradeLog>
