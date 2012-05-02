@@ -3,7 +3,7 @@
     <Identifier Id="e435087d-33d4-4f94-b465-f4c163476b71">
         <Name>ReloadPackage</Name>
         <Author>Scott Hanselman</Author>
-        <Version>1.0</Version>
+        <Version>1.1</Version>
         <Description xml:space="preserve">This package will reload the code files you had open when your project file was modified and unloaded then reloaded.
 </Description>
         <Locale>1033</Locale>
