@@ -37,11 +37,12 @@ namespace ScottHanselman.ReloadPackage
     // in the Help/About dialog of Visual Studio.
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]
     [Guid(GuidList.guidReloadPackagePkgString)]
-    [ProvideAutoLoad("{ADFC4E64-0397-11D1-9F4E-00A0C911004F}")]
-    [ProvideAutoLoad("{F1536EF8-92EC-443C-9ED7-FDADF150DA82}")]
-    [ProvideAutoLoad("{ADFC4E62-0397-11D1-9F4E-00A0C911004F}")]
-    [ProvideAutoLoad("{ADFC4E63-0397-11D1-9F4E-00A0C911004F}")]
-    [ProvideAutoLoad("{ADFC4E61-0397-11D1-9F4E-00A0C911004F}")]
+    [ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string)]
+    //[ProvideAutoLoad("{ADFC4E64-0397-11D1-9F4E-00A0C911004F}")]
+    //[ProvideAutoLoad("{F1536EF8-92EC-443C-9ED7-FDADF150DA82}")]
+    //[ProvideAutoLoad("{ADFC4E62-0397-11D1-9F4E-00A0C911004F}")]
+    //[ProvideAutoLoad("{ADFC4E63-0397-11D1-9F4E-00A0C911004F}")]
+    //[ProvideAutoLoad("{ADFC4E61-0397-11D1-9F4E-00A0C911004F}")]
     public sealed class ReloadPackagePackage : Package
     {
         /// <summary>
@@ -74,6 +75,8 @@ namespace ScottHanselman.ReloadPackage
         {
             Trace.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering Initialize() of: {0}", this.ToString()));
 
+            //SolutionEventsListener class from http://stackoverflow.com/questions/2525457/automating-visual-studio-with-envdte 
+            // via Elisha http://stackoverflow.com/users/167149/elisha
             listener = new SolutionEventsListener();
 
             winmgr = Package.GetGlobalService(typeof(IVsUIShellDocumentWindowMgr)) as IVsUIShellDocumentWindowMgr;
@@ -85,6 +88,7 @@ namespace ScottHanselman.ReloadPackage
             };
             listener.OnAfterOpenProject += () => { 
                 int hr = winmgr.ReopenDocumentWindows(comStream);
+                comStream = null;
                 Debug.WriteLine(String.Format("HANSELMAN: After Project Loaded! hr=", hr));
             };
 
@@ -92,19 +96,16 @@ namespace ScottHanselman.ReloadPackage
 
         }
 
-        void listener_OnBeforeCloseProject()
-        {
-        }
         #endregion
 
         private IStream SaveDocumentWindowPositions(IVsUIShellDocumentWindowMgr windowsMgr)
         {
-            IStream stream;
             if (windowsMgr == null)
             {
                 Debug.Assert(false, "IVsUIShellDocumentWindowMgr", String.Empty, 0);
                 return null;
             }
+            IStream stream;
             NativeMethods.CreateStreamOnHGlobal(IntPtr.Zero, true, out stream);
             if (stream == null)
             {
@@ -118,12 +119,14 @@ namespace ScottHanselman.ReloadPackage
                 return null;
             }
 
-            // Move to the beginning of the stream so it's ready to read
+            // Move to the beginning of the stream 
+            // In preparation for reading
             LARGE_INTEGER l = new LARGE_INTEGER();
             ULARGE_INTEGER[] ul = new ULARGE_INTEGER[1];
             ul[0] = new ULARGE_INTEGER();
             l.QuadPart = 0;
-            stream.Seek(l, /*Beginning of the stream*/0, ul);
+            //Seek to the beginning of the stream
+            stream.Seek(l, 0, ul);
             return stream;
         }
 
