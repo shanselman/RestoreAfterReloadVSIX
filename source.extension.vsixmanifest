@@ -10,21 +10,18 @@
         <MoreInfoUrl>http://www.hanselman.com/</MoreInfoUrl>
         <License>Readme.txt</License>
         <GettingStartedGuide>http://www.hanselman.com/</GettingStartedGuide>
-        <Icon>Package.ico</Icon>
-        <PreviewImage>Package.ico</PreviewImage>
+        <Icon>Package.png</Icon>
         <InstalledByMsi>false</InstalledByMsi>
         <SupportedProducts>
             <VisualStudio Version="10.0">
                 <Edition>Ultimate</Edition>
                 <Edition>Premium</Edition>
                 <Edition>Pro</Edition>
-                <Edition>Express_All</Edition>
             </VisualStudio>
             <VisualStudio Version="11.0">
                 <Edition>Ultimate</Edition>
                 <Edition>Premium</Edition>
                 <Edition>Pro</Edition>
-                <Edition>Express_All</Edition>
             </VisualStudio>
         </SupportedProducts>
         <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
